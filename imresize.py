@@ -134,9 +134,9 @@ def resizeAlongDim(A, dim, weights, indices, mode="vec"):
 
 
 def imresize(I, scalar_scale=None, method='bicubic', output_shape=None, mode="vec"):
-    if method is 'bicubic':
+    if method == 'bicubic':
         kernel = cubic
-    elif method is 'bilinear':
+    elif method == 'bilinear':
         kernel = triangle
     else:
         print('Error: Unidentified method supplied')
